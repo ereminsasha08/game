@@ -117,8 +117,8 @@ public class PlayerService {
                 Player player = playerRepository.findById(id).get();
                 String name = params.getOrDefault("name", null);
                 String title = params.getOrDefault("title", null);
-                Race race = params.containsKey("shipType") ? Race.valueOf(params.get("shipType")) : null;
-                Profession profession = params.containsKey("shipType") ? Profession.valueOf(params.get("shipType")) : null;
+                Race race = params.containsKey("race") ? Race.valueOf(params.get("race")) : null;
+                Profession profession = params.containsKey("profession") ? Profession.valueOf(params.get("profession")) : null;
                 String birthday = params.containsKey("birthday") ? params.get("birthday") : null;
                 Boolean banned = params.containsKey("banned") ? "true".equals(params.get("banned")) : null;
                 String experience = params.containsKey("experience") ? params.get("experience") : null;
